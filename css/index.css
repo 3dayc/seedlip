@@ -1,0 +1,1365 @@
+/* 초기화 스타일 CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "brown";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/Brown-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "brown";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/Brown-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "New Baskerville";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../font/NewBaskervilleStd-Italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "New Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NewBaskervilleStd-Roman.woff2) format("woff2");
+}
+
+body {
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 11px;
+  color: rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased;
+  background: rgb(18, 19, 18);
+}
+
+h1 {
+  font-family: "brown", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  font-style: normal;
+  letter-spacing: 8px;
+}
+
+h2 {
+  font-family: "New Baskerville", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "brown", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  font-style: normal;
+  letter-spacing: 2.67px;
+}
+
+p {
+  font-family: "New Baskerville", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.4;
+}
+
+ul {
+  list-style: none;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.nav-bar a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s;
+}
+
+/* header 스타일 */
+
+nav {
+  width: 1743px;
+  height: 58px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 68px 80px 0;
+  position: relative;
+}
+
+.nav-bar__list_left,
+.nav-bar__list_right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 51px;
+  opacity: 0;
+  animation: fadeInDown 1s ease 2s forwards;
+}
+
+.nav-bar__list_left li,
+.nav-bar__list_right li:first-child {
+  margin: 0 15px;
+  letter-spacing: 2.9px;
+}
+
+.nav-bar__list_right li:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0 15px;
+  letter-spacing: 2.9px;
+}
+
+.nav-bar__list_right li:nth-child(3) {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 5px 5px;
+  margin: 0 15px;
+}
+
+.nav-bar__logo img {
+  position: absolute;
+  top: 80px;
+  left: 875px;
+  -webkit-filter: grayscale(1) contrast(100) invert(1);
+}
+
+.hero_wrap {
+  width: 100%;
+  height: 166px;
+  padding: 270px 0 0;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  animation: hero_fade_in 0.5s ease 1.5s forwards;
+}
+
+.hero_wrap span {
+  font-family: "brown", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  font-style: normal;
+  letter-spacing: 2.67px;
+}
+
+.hero_wrap h1 {
+  margin: 30px 0 20px 0;
+}
+
+/* The NOgroni Section */
+
+.nogroni {
+  width: 1863;
+  height: 1115px;
+  padding: 80px 20px 60px;
+  opacity: 0;
+  animation: fadeInup 1s ease 2s forwards;
+}
+
+.section-title {
+  width: 1723px;
+  height: 43px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+}
+
+.nogroni-wrap {
+  width: 1863px;
+  height: 1042px;
+  display: flex;
+}
+
+.nogroni_contents-box__large {
+  width: 40%;
+  height: 1042px;
+  background: url(../img/NOGRONI_BAR_2019.jpg) no-repeat center;
+  background-size: 744px 1042px;
+  display: flex;
+  align-items: center;
+}
+
+.contents-box__text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contents-box__text span {
+  font-family: "brown", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  font-style: normal;
+  letter-spacing: 2.67px;
+}
+
+.contents-box__text h3 {
+  margin: 45px 0 20px;
+}
+
+.contents-box__text p {
+  margin: 0 0 20px;
+}
+
+.contents-box__btn-large {
+  width: 137px;
+  height: 9px;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px auto 20px;
+  padding: 20px;
+  transition: all 0.4s;
+}
+
+.contents-box__btn-large a {
+  width: 137px;
+  height: 48px;
+  color: white;
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 9px;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+.contents-box__btn-large:hover {
+  background: white;
+}
+
+.contents-box__btn-large:hover a {
+  color: rgb(9, 64, 44);
+  text-decoration: none;
+}
+
+.contents-box__small_wrap {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+article {
+  width: 372px;
+  height: 520px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.content-box__new-btn-wrap {
+  position: relative;
+}
+
+.content-box__new-btn {
+  position: absolute;
+  top: 20px;
+  left: 290px;
+  width: 58px;
+  height: 26px;
+  background: linear-gradient(
+    to bottom,
+    rgb(213, 176, 150) 0%,
+    rgb(151, 70, 26) 100%
+  );
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 10px;
+  display: block;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.contents-box__text-bottom h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 5.6px;
+  color: rgb(9, 64, 44);
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+.contents-box__text-bottom h5 {
+  display: block;
+  color: rgb(9, 64, 44);
+  font-family: "New Baskerville", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  opacity: 1;
+}
+
+.contents-box__text-bottom span {
+  font-size: 14px;
+}
+
+#contents-box__small_wrap_001 {
+  background: url(../img/NOgroni_Bundle_500x.png) no-repeat center 25px;
+  background-size: 271px 351px;
+  background-color: rgb(255, 255, 255);
+}
+
+.contents-box__text-bottom {
+  box-sizing: border-box;
+  width: 340px;
+  height: 520px;
+  padding: 410px 0 0 0px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contents-box__small_1:hover {
+  text-decoration: none;
+  background: rgba(73, 71, 71, 0.1);
+  display: flex;
+}
+
+.contents-box__text-bottom_2 {
+  box-sizing: border-box;
+  width: 340px;
+  height: 520px;
+  padding: 340px 0 0 0px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contents-box__text-bottom_2 p {
+  display: block;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  line-height: 28px;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contents-box__text-bottom_2 span {
+  font-family: "New Baskerville";
+  font-style: italic;
+}
+
+.contents-box__btn-small {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.contents-box__text-top {
+  width: 335px;
+  height: 480px;
+  padding: 20px;
+  font-size: 11px;
+  letter-spacing: 2.937px;
+}
+
+#contents-box__small_wrap_002 {
+  background: url(../img/Seedlip_NOgroni_Restaurant.jpg) no-repeat center;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 0px -200px 30px rgba(16, 16, 16, 0.6);
+}
+
+#contents-box__small_wrap_003 {
+  background: url(../img/RL___corn_NOgroni_W1f.jpg) no-repeat center;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+}
+
+#contents-box__small_wrap_004 {
+  background: url(../img/Nogroni-for-web_633x717_8309a94c-21c5-4e97-8c17-4c1a0d37ae5a_500x.png)
+    no-repeat center 25px;
+  background-size: 271px 351px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Signature Serves Section */
+
+.signature {
+  width: 1863px;
+  height: 593px;
+  padding: 80px 20px 60px;
+}
+
+.contents-title {
+  width: 1703px;
+  height: 43px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+}
+
+.signature_serves_wrap {
+  width: 1863px;
+  height: 520px;
+  display: flex;
+}
+
+#signature-wrap_1 {
+  background: url(../img/Grove_Tonic.jpg) no-repeat center;
+  background-size: cover;
+  border-right: 1px solid black;
+}
+
+.contents-box__text-top h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 2.9px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 10px 0 15px 10px;
+}
+
+.contents-box__text-top h5 {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-family: "New Baskerville", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.126px;
+  font-weight: 400;
+  line-height: 19px;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+#signature-wrap_2 {
+  background: url(../img/Garden_Tonic_Pea_Large.jpg) no-repeat center;
+  background-size: cover;
+  border-right: 1px solid black;
+}
+
+#signature-wrap_3 {
+  background: url(../img/Spice_Tonic-tinyjpg_91147160-7fbe-45b7-93df-6cdbe970a1c1.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+
+.signature_small_wrap_text {
+  width: 275px;
+  height: 137px;
+  text-align: center;
+  margin: 160px auto;
+}
+
+#signature-wrap_4 {
+  background: none;
+}
+
+.signature_small_wrap_text h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.8px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 0 auto 30px;
+}
+
+.signature_small_wrap_text p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  margin: 0 0 130px;
+}
+
+.contents-box__small_btn {
+  width: 137px;
+  height: 9px;
+  border: 1px solid rgb(9, 64, 44);
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px auto 20px;
+  padding: 20px;
+  transition: all 0.4s;
+  background-color: white;
+}
+
+.contents-box__small_btn span {
+  color: rgb(9, 64, 44);
+}
+
+.contents-box__small_btn a {
+  width: 137px;
+  height: 48px;
+  color: rgb(235, 235, 232);
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 9px;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+.contents-box__small_btn:hover {
+  background: rgb(235, 235, 232);
+  cursor: pointer;
+}
+
+.contents-box__small_btn:hover a {
+  color: rgb(235, 235, 232);
+  text-decoration: none;
+}
+
+/* Seedlip Range Section */
+
+.Seedlip_range_wrap {
+  width: 1863px;
+  height: 941px;
+  padding: 80px 20px 60px;
+}
+
+.Seedlip_range {
+  width: 1863px;
+  height: 868px;
+  display: flex;
+}
+
+.contents-box__medium_1 {
+  width: 33.33333%;
+  height: 868px;
+  background: url(../img/grove-70cl_500x.png) no-repeat center 40px;
+  background-size: 298px 673px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border-right: 1px solid black;
+}
+
+.contents-box__medium_2 {
+  width: 33.33333%;
+  height: 868px;
+  background: url(../img/garden-70cl_500x.png) no-repeat center 40px;
+  background-size: 298px 673px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border-right: 1px solid black;
+}
+
+.contents-box__medium_3 {
+  width: 33.33333%;
+  height: 868px;
+  background: url(../img/spice-70cl_500x.png) no-repeat center 40px;
+  background-size: 298px 673px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.Seedlip_range h4 {
+  font-family: "brown", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 5.6px;
+  color: rgb(9, 64, 44);
+  text-transform: uppercase;
+  opacity: 1;
+  width: 220px;
+  height: 780px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  margin: 0 auto 8px;
+}
+
+.Seedlip_range h5 {
+  color: rgb(9, 64, 44);
+  font-family: "New Baskerville", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  opacity: 1;
+  width: 60px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contents-box__medium_text_1:hover {
+  padding: 0 0 88px;
+  text-decoration: none;
+  background: rgba(238, 126, 219, 0.1);
+}
+
+.contents-box__medium_text_2:hover {
+  padding: 0 0 88px;
+  text-decoration: none;
+  background: rgba(73, 71, 71, 0.1);
+}
+
+.contents-box__medium_text_3:hover {
+  padding: 0 0 88px;
+  text-decoration: none;
+  background: rgba(73, 71, 71, 0.1);
+}
+
+.Seedlip_range span {
+  font-size: 14px;
+}
+
+/* Grove 42 Section */
+
+.grove {
+  width: 1863;
+  height: 1115px;
+  padding: 80px 20px 60px;
+}
+
+.contents-title {
+  width: 1723px;
+  height: 43px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+}
+
+.grove-wrap {
+  width: 1863px;
+  height: 1042px;
+  display: flex;
+}
+
+.grove_contents-box__large {
+  width: 40%;
+  height: 1042px;
+  background: url(../img/SDL_Grove_205.jpg) no-repeat center;
+  background-size: 744px 1042px;
+  display: flex;
+  align-items: center;
+}
+
+.grove_contents-box__text {
+  margin: 0 auto;
+  text-align: center;
+  width: 684px;
+  height: 837px;
+  padding: 102px 0;
+}
+
+.grove_contents-box__text h3 {
+  margin: 0 0 20px;
+}
+
+.grove_contents-box__text p {
+  margin: 0 0 30px;
+}
+
+.contents-box__btn-large {
+  width: 137px;
+  height: 9px;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px auto 20px;
+  padding: 20px;
+  transition: all 0.4s;
+}
+
+.contents-box__btn-large a {
+  width: 137px;
+  height: 48px;
+  color: white;
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 9px;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+.contents-box__btn-large:hover {
+  background: white;
+}
+
+.contents-box__btn-large:hover a {
+  color: rgb(9, 64, 44);
+  text-decoration: none;
+}
+
+.grove_small_wrap {
+  width: 60%;
+  /* height: 520px; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.grove_small_wrap_text {
+  width: 275px;
+  height: 137px;
+  text-align: center;
+  margin: 160px auto;
+}
+
+.grove_small_wrap_001 {
+  background: none;
+}
+
+.grove_small_wrap_text h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.8px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 0 auto 30px;
+}
+
+.grove_small_wrap_text p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  margin: 0 0 130px;
+}
+
+.contents-box__small_btn {
+  width: 137px;
+  height: 9px;
+  border: 1px solid rgb(9, 64, 44);
+  border-radius: 4px;
+  text-align: center;
+  margin: 10px auto 20px;
+  padding: 20px;
+  transition: all 0.4s;
+  background-color: white;
+}
+
+.contents-box__small_btn span {
+  color: rgb(9, 64, 44);
+}
+
+.contents-box__small_btn a {
+  width: 137px;
+  height: 48px;
+  color: rgb(235, 235, 232);
+  font-family: "brown", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 9px;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+.contents-box__small_btn:hover {
+  background: rgb(235, 235, 232);
+}
+
+.contents-box__small_btn:hover a {
+  color: rgb(235, 235, 232);
+  text-decoration: none;
+}
+
+#grove_small_wrap_002 {
+  background: url(../img/grove-70cl_350x.png) no-repeat center 30px;
+  background-size: 155px 351px;
+  background-color: rgb(255, 255, 255);
+}
+
+#grove_small_wrap_003 {
+  background: url(../img/Grove_Tonic.jpg) no-repeat center;
+  background-size: 372px 521px;
+  background-color: rgb(255, 255, 255);
+}
+
+#grove_small_wrap_004 {
+  background: url(../img/Grove_CosNOpolitan.jpg) no-repeat center;
+  background-size: 372px 521px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Beasley: The Home of Seedlip Section */
+
+.beasley {
+  width: 1863;
+  height: 1115px;
+  padding: 80px 20px 60px;
+}
+
+.section-title {
+  width: 1723px;
+  height: 43px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+}
+
+.grove-wrap {
+  width: 1863px;
+  height: 1042px;
+  display: flex;
+}
+
+.beasley_grove_contents-box__large {
+  width: 40%;
+  height: 1042px;
+  background: url(../img/beasleycover.jpg) no-repeat center;
+  background-size: 744px 1042px;
+  display: flex;
+  align-items: center;
+}
+
+.beasley_contents-box__text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.beasley_contents-box__text h3 {
+  margin: 0 0 20px;
+  letter-spacing: 6.4px;
+}
+
+.beasley_contents-box__text p {
+  margin: 0 0 30px;
+}
+
+.beasley_small_wrap {
+  width: 60%;
+  height: 1042px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.beasley_small_box_text_1 {
+  box-sizing: border-box;
+  width: 371px;
+  height: 520px;
+  padding: 375px 0 0 30px;
+  display: block;
+  overflow: hidden;
+}
+
+#beasley_small_box_001 {
+  background: url(../img/1641club_beasley.jpg) no-repeat center;
+  background-size: 371px 520px;
+  box-shadow: inset 0px -200px 30px rgba(16, 16, 16, 0.6);
+}
+
+.beasley_small_box_text_1 p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.18px;
+  width: 310px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  padding: 0 0 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.beasley_small_box_btn {
+  width: 311px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.beasley_small_box_btn h4:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.beasley_small_box_btn h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 2.67px;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 10px;
+}
+
+.beasley_small_box_btn h5 {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.beasley_small_box_text-bottom:hover {
+  text-decoration: none;
+}
+
+#beasley_small_box_002 {
+  background: url(../img/SEEDLIP_BEASLEYS_24_230__1_.jpg) no-repeat center;
+  background-size: 371px 520px;
+  box-shadow: inset 0px -200px 30px rgba(16, 16, 16, 0.6);
+}
+
+.beasley_small_box_text_2 {
+  box-sizing: border-box;
+  width: 371px;
+  height: 520px;
+  padding: 347px 0 0 30px;
+  display: block;
+  overflow: hidden;
+}
+
+.beasley_small_box_text_2 p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.18px;
+  width: 310px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  padding: 0 0 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.beasley_small_box_text_2 span,
+.beasley_small_box_text_4 span {
+  font-style: italic;
+}
+
+#beasley_small_box_003 {
+  background: url(../img/Beasley_seedlipdrinks_2x.png) no-repeat center bottom;
+  background-size: 227px 322px;
+  background-color: rgb(79, 80, 79);
+}
+
+.contents-box__text-beasley {
+  box-sizing: border-box;
+  width: 371px;
+  height: 520px;
+  padding: 70px 0 0 0;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contents-box__text-beasley h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.8px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 0 0 30px;
+}
+
+.contents-box__text-beasley span {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#beasley_small_box_004 {
+  background: url(../img/Chloe.jpg) no-repeat center;
+  background-size: 371px 520px;
+  box-shadow: inset 0px -200px 30px rgba(16, 16, 16, 0.6);
+}
+
+.beasley_small_box_text_4 {
+  box-sizing: border-box;
+  width: 371px;
+  height: 520px;
+  padding: 375px 0 0 30px;
+  display: block;
+  overflow: hidden;
+}
+
+.beasley_small_box_text_4 p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.18px;
+  width: 310px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  padding: 0 0 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Discover More Section */
+
+.discover {
+  width: 1905px;
+  height: 580px;
+  margin: 80px auto 0;
+}
+
+.discover_wrap {
+  width: 1745px;
+  height: 580px;
+  padding: 0 80px;
+  display: flex;
+}
+
+.discover-title {
+  width: 25%;
+  height: 580px;
+  background: none;
+}
+
+.discover-contents {
+  width: 25%;
+  height: 580px;
+  background: none;
+}
+
+.discover-title span {
+  font-family: "brown", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  font-style: normal;
+  letter-spacing: 2.67px;
+}
+
+.discover-contents h4 {
+  display: block;
+  font-family: "brown", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.8px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 0 0 15px;
+}
+
+.discover-contents p {
+  display: block;
+  font-family: "New Baskerville", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  margin: 0 0 20px;
+}
+
+.discover-contents a {
+  font-family: "brown", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  font-style: normal;
+  letter-spacing: 2.67px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.discover-contents a:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: all 0.4s;
+}
+
+/* Footer Styles */
+
+.social-wrap {
+  width: 1743px;
+
+  height: 250px;
+
+  box-sizing: border-box;
+
+  display: block;
+
+  color: white;
+
+  align-items: center;
+
+  margin-left: 500px;
+
+  margin-bottom: 60px;
+}
+
+.email-submit {
+  width: 1300px;
+
+  font-family: "New Baskerville";
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  font-size: 20px;
+}
+
+.email-submit__input {
+  margin-top: 30px;
+
+  margin-bottom: 60px;
+}
+
+.email-submit__input img {
+  vertical-align: middle;
+
+  width: 41px;
+
+  height: 11px;
+}
+
+.email-submit__input-text {
+  width: 1250px;
+
+  height: 72px;
+
+  font-size: 36px;
+
+  font-family: "New Baskerville";
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  color: white;
+
+  border: none;
+
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+  background: transparent;
+
+  -webkit-writing-mode: horizontal-tb;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-border-image: none;
+}
+
+.email-submit__input-text::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.email-submit__input-text:focus {
+  outline: none;
+}
+
+.email-submit__input img {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.email-submit__input img:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s ease-in;
+  animation: arrowPointer 0.2s ease-in-out forwards;
+}
+
+.social-menu__wrap {
+  width: 1280px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.social-menu__sns {
+  display: flex;
+
+  justify-content: flex-start;
+}
+
+.social-menu__sns li {
+  margin-right: 20px;
+}
+
+.social-menu__sns li i:hover,
+.social-menu__menu-list li:hover,
+.footer-nav__list li:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s;
+}
+
+.social-menu__menu-list {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.social-menu__menu-list li {
+  font-size: 10px;
+
+  font-weight: 400;
+
+  margin-right: 30px;
+
+  letter-spacing: 2.67px;
+}
+
+.social-menu__menu-list li span{
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-nav__wrap {
+  width: 1280px;
+
+  text-align: center;
+
+  margin: 0 auto;
+
+  margin-bottom: 50px;
+}
+
+.footer-nav__list {
+  display: flex;
+
+  justify-content: space-evenly;
+
+  padding: 0 0 20px;
+}
+
+.footer-nav__list li {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.67px;
+}
+
+.copyright {
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2.67px;
+}
+
+.warning {
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 2.67px;
+}
+
+.contents-box__small_wrap-box {
+  overflow: hidden;
+}
+
+@keyframes hero_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInup {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes arrowPointer {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
